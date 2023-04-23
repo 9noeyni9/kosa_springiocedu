@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="user"  class="sample9.User">
+	<property name="name" value="Dooly"/><!--setter를 받아오는 것-->
+	<property name="age"  value="10"/>
+	<property name="hobby" value="swimming"/>
+</bean>
+
+<bean id="myProcess0"  class="sample9.UserShow" /><!--argument 안 받는 생성자에 의해서 객체가 생성됨-->
+<bean id="myProcess1"  class="sample9.UserShow"  autowire="byName"/><!--autowire : annotation이 나오기 전 잠깐 거쳐갔던 것--> <!--autowire="byName" : 매개변수와 똑같은 이름의 객체를 찾아서 설정하겠다-->
+<bean id="myProcess2"  class="sample9.UserShow"  autowire="byType"/><!--property와 매개변수가 똑같은 타입의 객체를 찾아서 설정하겠다-->
+<bean id="myProcess3"  class="sample9.UserShow"  autowire="constructor"/>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
